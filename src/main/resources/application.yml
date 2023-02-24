@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/weather
+    name: postgres
+    password: postgres
+  liquibase:
+    enabled: true
+    change-log: db/changelog/changelog-master.yml
+
+server:
+  port: 8090
+
+# Swagger Configuration
+springdoc:
+  api-docs:
+    enabled: true
+    path: /rest-api-docs
+  swagger-ui:
+    path: /swagger-ui

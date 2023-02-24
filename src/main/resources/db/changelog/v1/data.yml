@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - preConditions:
+#  - include:
+#      file: ""
+#      relativeToChangelogFile: true

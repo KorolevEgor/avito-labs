@@ -7,6 +7,14 @@ spring:
   liquibase:
     enabled: true
     change-log: db/changelog/changelog-master.yml
+cloud:
+  openfeign:
+    client:
+      config:
+        default:
+          connectTimeout: 5000
+          readTimeout: 5000
+          loggerLevel: basic
 
 server:
   port: 8090
@@ -18,3 +26,8 @@ springdoc:
     path: /rest-api-docs
   swagger-ui:
     path: /swagger-ui
+app:
+  weather-api:
+    key: ${WEATHER_API_KEY:ea7aef8e9e254bd4a58170343232402}
+    city-name: ${WEATHER_API_CITY_NAME:Moscow}
+    forecast-days-count: ${WEATHER_API_FORECAST_DAYS_COUNT:2}
